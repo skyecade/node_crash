@@ -1,6 +1,9 @@
-const Person = require('./person')
-const Peep = require('./person')
+const Logger = require('./logger');
 
-const person1 = new Person('Bob Sin', 30);
+const logger = new Logger();
 
-person1.greeting();
+logger.on('message', (data) => console.log('Called Listener:', data));
+
+logger.log('Hello World');
+logger.log('Good Afternoon Galaxy');
+logger.log('Good Night Universe');
