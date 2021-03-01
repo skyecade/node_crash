@@ -1,3 +1,4 @@
+const { clear } = require('console');
 const EventEmitter = require('events');
 const uuid = require('uuid');
 
