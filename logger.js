@@ -1,4 +1,3 @@
-const { clear } = require('console');
 const EventEmitter = require('events');
 const uuid = require('uuid');
 
@@ -11,4 +10,12 @@ class Logger extends EventEmitter {
     }
 }
 
-module.exports = Logger;
+// module.exports = Logger;
+
+const logger = new Logger();
+
+logger.on('message', (data) => console.log('Called Listener:', data));
+
+logger.log('Hello World');
+logger.log('Good Afternoon Galaxy');
+logger.log('Good Night Universe');
